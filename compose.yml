@@ -1,0 +1,29 @@
+services:
+
+  nginx:
+    build: images/nginx/
+    # Volumes ajoutés
+    volumes:
+      - nginx_conf:/etc/nginx/
+      - ./php:/www
+    # Port ajouté
+    ports:
+      - "80:80"
+      # Port 81 mappé aussi
+      - "81:81"
+
+  php:
+    build: images/php/
+    # Volume ajouté
+    volumes:
+      - ./php:/www
+
+  node:
+    build: images/node/
+    # Volume ajouté
+    volumes:
+      - ./nodejs:/www
+
+volumes:
+
+  nginx_conf:
