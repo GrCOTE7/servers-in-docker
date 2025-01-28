@@ -2,28 +2,26 @@ services:
 
   nginx:
     build: images/nginx/
-    # Volumes ajoutés
+    # image: grcote7/servers-in-docker:server_nginx
     volumes:
-      - nginx_conf:/etc/nginx/
+      # - nginx_conf:/etc/nginx/
       - ./php:/www
-    # Port ajouté
     ports:
       - "80:80"
-      # Port 81 mappé aussi
       - "81:81"
 
   php:
     build: images/php/
-    # Volume ajouté
+    # image: grcote7/servers-in-docker:server_php
     volumes:
       - ./php:/www
 
   node:
     build: images/node/
-    # Volume ajouté
+    # image: grcote7/servers-in-docker:server_node
     volumes:
       - ./nodejs:/www
 
-volumes:
+# volumes:
 
-  nginx_conf:
+#   nginx_conf:
