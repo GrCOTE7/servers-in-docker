@@ -1,10 +1,6 @@
 # Docker (Base)
 
-3 servers:
-- nginx
-- [php](http://localhost)
-- [node](http://localhost:81)
-
+3 servers (nginx - php - node)
 
 ## Installation
 
@@ -13,9 +9,18 @@ CLI:
 Pré-requis: Avoir docker installé et lancé
 
 ```bash
-git clone dépôt...
+git clone https://github.com/GrCOTE7/servers-in-docker.git
+cd servers-in-docker
 docker compose up -d
 ```
 
-Réf.:
-[NicelyDev](https://www.nicelydev.com/docker/nginx-php-node)
+## Utilisation
+
+Ouvrir:
+
+- [php](http://localhost)
+- [node](http://localhost:81)
+
+## Référence
+
+[NicelyDev 'nginx-php-node'](https://www.nicelydev.com/docker/nginx-php-node)
